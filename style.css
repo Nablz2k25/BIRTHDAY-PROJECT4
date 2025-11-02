@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e8f2ff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Title */
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #054aa6;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #2c6ecf;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Input box */
+.message-box textarea {
+    width: 100%;
+    height: 90px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    background: #5fa8ff;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3b8fee;
+}
+
+/* Messages */
+#messagesDisplay p {
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    animation: fadeIn 0.7s ease forwards;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(8px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Balloons */
+.balloons {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    width: 18px;
+    height: 22px;
+    background: #7dbaff;
+    border-radius: 50% 50% 45% 45%;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.9;
+}
+
+@keyframes floatUp {
+    from {transform: translateY(80vh);}
+    to {transform: translateY(-150px);}
+}
